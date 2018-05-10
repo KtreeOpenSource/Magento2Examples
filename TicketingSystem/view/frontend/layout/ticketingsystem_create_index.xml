@@ -1,0 +1,20 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+  <head>
+       <title>Create Ticket</title>
+       <css src="Ktree_TicketingSystem::css/style.css" />
+  </head>
+    <update handle="customer_account"/>
+    <body>
+        <move element="page.main.title" destination="content" before="-"/>
+         <referenceBlock name="customer-account-navigation-ktreeticketingsystem">
+            <arguments>
+                <argument name="is_highlighted" xsi:type="boolean">true</argument>
+            </arguments>
+        </referenceBlock>
+
+         <referenceContainer name="content">
+           <block class="Ktree\TicketingSystem\Block\Create" name="ticketingsystem.create" template="Ktree_TicketingSystem::create.phtml">
+           </block>
+         </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,81 @@
+
+<div class="column">
+<form class="form form-edit-account" action="<?php /* @escapeNotVerified */ echo $block->getUrl('ticketingsystem/create/index') ?>" method="post" id="form-validate" enctype="multipart/form-data" data-hasrequired="* Required Fields" autocomplete="off" novalidate="novalidate">
+    <fieldset class="fieldset info">
+        <div class="field field-category required">
+            <label class="label" for="category">
+                <span><?=  __('Category') ?></span>
+            </label>
+
+            <div class="control">
+                <select id="category" name="category" title="Category" class="input-text required-entry" data-validate="{required:true}" aria-required="true">
+                 <option value="">--Please select a category type--</option>
+                    <?php
+                    foreach ($block->getCategories() as $key => $val) {
+                        echo '<option value='.$key.'>'.$val.'</option>';
+                    }
+                    ?>
+                </select>
+            </div>
+        </div>
+        <div class="field field-priority required">
+            <label class="label" for="priority">
+                <span><?=  __('Priority') ?></span>
+            </label>
+
+            <div class="control">
+               <select id="priority" name="priority" title="Priority" class="input-text required-entry" data-validate="{required:true}" aria-required="true">
+                <option value="">--Please select a priority type--</option>
+                    <?php
+                    foreach ($block->getPriorities() as $key => $val) {
+                        echo '<option value='.$key.'>'.$val.'</option>';
+                    }
+                    ?>
+               </select>
+            </div>
+        </div>
+        <div class="field field-subject required">
+            <label class="label" for="subject">
+                <span><?=  __('Subject') ?></span>
+            </label>
+
+            <div class="control">
+                <input type="text" id="subject" name="subject" title="Subject" class="input-text required-entry" data-validate="{required:true}" aria-required="true">
+            </div>
+        </div>
+
+        <div class="field field-content required">
+            <label class="label" for="content">
+                <span><?=  __('Content') ?></span>
+            </label>
+
+            <div class="control">
+                <textarea type="text" id="content" name="content" title="Content" class="input-text required-entry" data-validate="{required:true}" aria-required="true"></textarea>
+            </div>
+        </div>
+
+        <div class="primary create-ticket">
+            <button type="submit" class="action save primary" title="Save"><span><?=  __('Save') ?></span></button>
+        </div>
+
+    </fieldset>
+
+    <div class="actions-toolbar">
+
+    </div>
+</form>
+<script>
+    require([
+        "jquery",
+        "mage/mage"
+    ], function($){
+        var dataForm = $('#form-validate');
+        var ignore = null;
+
+        dataForm.mage('validation', {
+                    ignore: ignore ? ':hidden:not(' + ignore + ')' : ':hidden'
+                });
+
+    });
+</script>
+</div>

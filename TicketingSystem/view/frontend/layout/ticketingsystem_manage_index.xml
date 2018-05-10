@@ -1,0 +1,14 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <head>
+       <title>Manage Ticket</title>
+       <css src="Ktree_TicketingSystem::css/style.css" />
+  </head>
+    <update handle="customer_account"/>
+    <body>
+        <move element="page.main.title" destination="content" before="-"/>
+         <referenceContainer name="content">
+             <block class="Ktree\TicketingSystem\Block\Manage" name="ticketingsystem.manage" template="Ktree_TicketingSystem::manage.phtml" cacheable="false">
+             </block>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,15 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="ktree_ticketingsystem_tickets_listing_data_source" xsi:type="string">Ktree\TicketingSystem\Model\ResourceModel\Tickets\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Ktree\TicketingSystem\Model\ResourceModel\Tickets\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">ktree_ticketing_system</argument>
+            <argument name="resourceModel" xsi:type="string">Ktree\TicketingSystem\Model\ResourceModel\Tickets</argument>
+        </arguments>
+    </virtualType>
+</config>
