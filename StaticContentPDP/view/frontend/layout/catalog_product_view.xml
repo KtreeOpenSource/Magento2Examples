@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page layout="2columns-right" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<body>
+    <referenceContainer name="product.info.form.content">
+        <block name="product.info.deliverypromise"
+          template="Ktree_StaticContentPDP::catalog/product/deliverypromise.phtml"
+           before="product.info.addtocart" />
+    </referenceContainer>
+</body>
+</page>

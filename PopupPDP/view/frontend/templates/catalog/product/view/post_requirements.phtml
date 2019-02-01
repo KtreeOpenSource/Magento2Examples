@@ -1,0 +1,30 @@
+  <button data-mage-init='{"myjs": {}}' type="button" class="btn btn-primary btn-lg" id="popupButton" data-toggle="modal"
+  data-target="#myModal"><?php echo __('Post Requirement')?></button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog" style="display:none;">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"><?php echo __('Post Requirement')?></h4>
+        </div>
+        <div class="modal-body">
+          <form action="">
+      <div class="form-group">
+        <label for="name"><?php echo __('Name');?>:</label>
+        <input type="email" class="form-control" id="name" placeholder="<?php echo __('Enter name')?>" name="name">
+      </div>
+      <div class="form-group">
+        <label for="requirement"><?php echo __('Requirement') ?> :</label>
+      <textarea class="form-control" rows="5" id="requirement"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-default"><?php echo __('Submit')?></button>
+    </form>
+        </div>
+      </div>
+
+    </div>
+  </div>

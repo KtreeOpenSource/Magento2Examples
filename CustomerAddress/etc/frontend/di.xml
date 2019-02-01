@@ -1,0 +1,8 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+  <type name="Magento\Checkout\Model\Type\Onepage">
+       <plugin name="assign_address_to_quote" type="Ktree\CustomerAddress\Model\Type\OnepagePlugin" />
+   </type>
+   <type name="Magento\Checkout\Model\DefaultConfigProvider">
+        <plugin name="add_new_attribute_to_quote_data" type="Ktree\CustomerAddress\Model\DefaultConfigProviderPlugin" />
+    </type>
+</config>
